@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="zxx">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="AMAL KRISHNAN R">
+    <meta name="description" content="This is for learning purpose">
+    <title>My new web page</title>
+    <link rel="stylesheet" href="./styles.css" type="text/css">
+    <link rel="icon" href="../06_Lesson/images/icons8-html5-48.png">
+</head>
+
+<body>
+    <header></header>
+    <main>
+        <form action="https://httpbin.org/get" method="get">
+            <fieldset>
+                <legend>User interest form</legend>
+                <label for="fullName">Name :</label>
+                <input type="text" name="fullName" id="fullName" autofocus autocomplete="off" placeholder="Full Name"
+                    required>
+                <br>
+                <label for="age">AGE :</label>
+                <input type="number" name="age" id="age" step="1" min="18" max="50" placeholder="AGE" required>
+                <br>
+                <label>Gender :</label>
+                <input type="radio" name="gender" id="male" value="male"><label for="male">Male</label>
+                <input type="radio" name="gender" id="female" value="female"><label for="female">Female</label>
+                <input type="radio" name="gender" id="other" value="other"><label for="other">Other</label>
+                <br><br>
+                <label for="favourite_food">Favourite Foods :</label>
+                <select name="favourite_food" id="favourite_food" multiple required size="4">
+                    <option value="" disabled selected>Please select any dishes</option>
+                    <optgroup label="Indian dishes">
+                        <option value="ghee_rice">Ghee rice</option>
+                        <option value="chicken_biriyani">Chicken biriyani</option>
+                        <option value="butter_chicken">Butter chicken</option>
+                        <option value="pepper_chicken">Pepper chicken</option>
+                        <option value="naan">Naan</option>
+                        <option value="dosa">Dosa</option>
+                        <option value="idili">Idili</option>
+                    </optgroup>
+                    <optgroup label="Foreign Dishes">
+                        <option value="colcannon_potatoes">Colcannon Potatoes</option>
+                        <option value="irish_spiced_beef">Irish Spiced Beef</option>
+                        <option value="scottish_oatmeal_rolls">Scottish Oatmeal Rolls</option>
+                        <option value="almond_tea_bread">Almond Tea Bread</option>
+                        <option value="english_rhubarb_crumble">English Rhubarb Crumble</option>
+                        <option value="crispy_fish_chips">Crispy Fish & Chips</option>
+                        <option value="german_potato_dumplings">German Potato Dumplings</option>
+                        <option value="oma_apfelkuchen">Oma's Apfelkuchen (Grandma's Apple Cake)</option>
+                    </optgroup>
+                    <option value="other">Other</option>
+                </select>
+                <br>
+                <br>
+                <fieldset>
+                    <legend><label for="coffee">Would you like to add some coffee?</label>
+                        <br>
+                        <input type="text" name="coffee" id="coffee" list="coffeeList">
+                        <datalist id="coffeeList">
+                            <option value="americano">
+                            <option value="coffee">
+                            <option value="expresso">
+                            <option value="latte">
+                            <option value="cortado">
+                            <option value="other">
+                        </datalist>
+                    </legend>
+                </fieldset>
+                <br>
+                <fieldset>
+                    <legend>Do you like pets? if yes, please select</legend>
+                    <input type="checkbox" name="pets" id="dog" value="dog"><label for="dog">Dog</label>
+                    <input type="checkbox" name="pets" id="cat" value="cat"><label for="cat">Cat</label>
+                    <input type="checkbox" name="pets" id="mouse" value="mouse"><label for="mouse">Mouse</label>
+                    <input type="checkbox" name="pets" id="moongose" value="moongose"><label
+                        for="moongose">Moongose</label>
+                    <input type="checkbox" name="pets" id="snake" value="snake"><label for="snake">Snake</label>
+                    <input type="checkbox" name="pets" id="lion" value="lion"><label for="lion">Lion</label>
+                    <input type="checkbox" name="pets" id="tiger" value="tiger"><label for="tiger">Tiger</label>
+                </fieldset>
+                <br>
+                <fieldset>
+                    <legend>Contact details</legend>
+                    <input type="email" name="email" id="email" placeholder="E-mail"
+                        pattern="[0-9a-zA-z._+-]+@[a-z+-_]+.[a-z]" required><br>
+                    <input type="tel" name="phoneNumber" id="phoneNumber" placeholder="Phone Number" required>
+                </fieldset>
+                <br>
+                <fieldset>
+                    <legend>Send me a note</legend>
+                    <textarea name="note" id="note" placeholder="Type here.." rows="10" cols="55"></textarea>
+
+                </fieldset>
+                <button type="submit">Submit</button>
+                <button type="submit" formaction="https://httpbin.org/post" formmethod="post">Post</button>
+                <button type="reset">Reset</button>
+            </fieldset>
+        </form>
+    </main>
+    <footer></footer>
+</body>
+
+</html>
