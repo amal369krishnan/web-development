@@ -1,0 +1,2 @@
+packages:
+  - "packages/*"  # Points to all subfolders within 'packages'

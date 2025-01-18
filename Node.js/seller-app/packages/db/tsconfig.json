@@ -1,0 +1,21 @@
+{
+  "extends": "../../tsconfig.lib.json",
+  "compilerOptions": {
+	"module": "NodeNext",
+    "moduleResolution": "NodeNext",
+	"baseUrl": ".",
+	"rootDir": ".",
+	"paths": {
+	  "db/*": [
+		"./*"
+	  ]
+	}
+  },
+  "include": [
+	"./*"
+  ],
+  "exclude": [
+	"node_modules"
+  ]
+}
+

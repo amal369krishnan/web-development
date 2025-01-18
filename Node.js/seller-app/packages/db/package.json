@@ -1,0 +1,28 @@
+{
+  "name": "db",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "files": [
+    "lib"
+  ],
+  "main": "./lib/index.js",
+  "types": "./types/index.d.ts",
+  "engines": {
+    "node": ">=20.0"
+  },
+  "scripts": {
+    "generate": "prisma generate",
+    "migration": "prisma migarte dev"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.7",
+    "nodemon": "^3.1.9",
+    "ts-node": "^10.9.2",
+    "typescript": "~5.7.3"
+  },
+  "dependencies": {
+    "@prisma/client": "^6.2.1",
+    "prisma": "^6.2.1"
+  }
+}
