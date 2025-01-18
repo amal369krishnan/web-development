@@ -1,0 +1,16 @@
+/* 
+- Universal selector is '*' 
+- They are not override/inherit any properties
+- Using then is bad practice
+- Tag form donot inherit any parent properties instead u have to explicitly add inner forms tags such as input,select,button etc
+- to provide parent properties.
+- eg: input,select,button{
+    font: inherit;
+}  
+*/
+
+/* 
+** For text readablity and background color, 
+    -- got to 'https://coolors.co/contrast-checker/112a46-acc8e5' for contrast checker.
+        7.1 above is good readability of text with background and text color combination
+*/
