@@ -1,0 +1,28 @@
+{
+  "extends": "../../tsconfig.lib.json",
+  "compilerOptions": {
+    "module": "NodeNext",
+    "moduleResolution": "NodeNext",
+    "target": "ESNext",
+    "esModuleInterop": true,
+    "strictBindCallApply": true,
+    "strictFunctionTypes": true,
+    "alwaysStrict": true,
+    "strict": false,
+    "noImplicitReturns": false,
+    "outDir": "dist",
+    "baseUrl": "./src",
+    "types": ["node"],
+    "paths": {
+      "logger/*": ["packages/*"]
+    }
+  },
+  "ts-node": {
+    "files": true,
+    "swc": true,
+    "transpileOnly": true
+  },
+
+  "include": ["src/**/*"],
+  "exclude": ["node_modules"]
+}

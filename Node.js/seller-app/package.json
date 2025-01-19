@@ -2,7 +2,7 @@
   "name": "seller-app",
   "private": true,
   "version": "1.0.0",
-  "packages/*": "workspaces",
+  "packages/*": "workspaces:*",
   "scripts": {
     "clean": "npm-run-all 'clean:*'",
     "clean:misc": "rimraf node_modules 'packages/*/node_modules'"
@@ -12,5 +12,7 @@
     "rimraf": "^5.0.0",
     "typescript": "~5.7.3",
     "@types/node": "^22.10.7"
-  }
+  },
+  "author": "Amal Krishnan R",
+	"license": "ISC"
 }

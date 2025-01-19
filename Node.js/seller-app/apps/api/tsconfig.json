@@ -1,0 +1,36 @@
+{
+  "extends": "../../tsconfig.lib.json",
+  "compilerOptions": {
+    "sourceMap": false,
+    "inlineSourceMap": true,
+    "declarationDir": "dist/types",
+    "module": "NodeNext",
+    "moduleResolution": "NodeNext",
+    "target": "ESNext",
+    "esModuleInterop": true,
+    "strictBindCallApply": true,
+    "strictFunctionTypes": true,
+    "alwaysStrict": true,
+    "strict": false,
+    "noImplicitReturns": false,
+    "baseUrl": "./",
+    "outDir": "./dist",
+    "types": ["node"],
+    "paths": {
+      "@apps/logger": [
+      "../../packages/logger"
+      ],
+      "@apps/db": [
+      "../../packages/db"
+      ],
+    }
+  },
+  "ts-node": {
+    "files": true,
+    "swc": true,
+    "transpileOnly": true
+  },
+
+  "include": ["src/**/*"],
+  "exclude": ["node_modules"]
+}

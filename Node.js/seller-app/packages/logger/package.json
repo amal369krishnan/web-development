@@ -1,0 +1,64 @@
+{
+	"name": "logger",
+	"version": "1.0.0",
+	"private": true,
+	"description": "",
+	"main": "./dist/index.js",
+	"types": "./dist/index.d.ts",
+	"type": "commonjs",
+	"files": [
+		"dist/**/*"
+	],
+	"engines": {
+		"node": ">=20.0"
+	},
+	"scripts": {
+		"preinstall": "npx only-allow pnpm",
+		"build": "pnpm clean && pnpm build:swc && pnpm build:types",
+		"build:swc": "swc src --copy-files --source-maps -d dist",
+		"build:types": "tsc src/index.ts --declaration --allowJs --emitDeclarationOnly --outDir dist",
+		"clean": "rimraf dist"
+	},
+	"author": "Amal Krishnan R",
+	"license": "ISC",
+	"dependencies": {
+		"@swc/cli": "0.1.62",
+		"@swc/core": "1.3.55",
+		"eslint-config-xo": "0.43.1",
+		"eslint-config-xo-typescript": "0.57.0",
+		"eslint-plugin-ava": "14.0.0",
+		"lodash": "4.17.21",
+		"luxon": "3.2.1",
+		"pino": "8.11.0",
+		"pino-abstract-transport": "1.0.0",
+		"typescript": "5.2.2",
+		"webpack": "5.81.0"
+	},
+	"devDependencies": {
+		"@types/lodash": "4.14.194",
+		"@types/luxon": "3.2.0",
+		"@types/node": "20.5.7",
+		"@typescript-eslint/eslint-plugin": "6.5.0",
+		"@typescript-eslint/parser": "6.5.0",
+		"ava": "5.2.0",
+		"chokidar": "3.5.3",
+		"eslint": "8.48.0",
+		"eslint-plugin-unicorn": "48.0.1"
+	},
+	"eslintConfig": {
+		"parser": "@typescript-eslint/parser",
+		"env": {
+			"node": true,
+			"es6": true
+		},
+		"parserOptions": {
+			"requireConfigFile": false
+		},
+		"extends": [
+			"prettier"
+		],
+		"rules": {
+			"import/extensions": "off"
+		}
+	}
+}
